@@ -5,8 +5,15 @@ class list_functions:
         ### take a list of varied depth
         ### and flatten it! with no recursion
         return reduce(list.__add__, map(lambda x: list(x), [y for y in List]))
-
-
+        
+    def unique_elements_list_intersection(list1,list2):
+        """
+        Return the unique elements that are in both list1 and list2
+        (repeated elements in listi will not be duplicated in the result).
+        This should run in O(n1+n2) where n1=|list1|, n2=|list2|.
+        """
+        return list(set.intersection(set(list1),set(list2)))
+        
     def uniqify(self, sequence): 
         # order preserving
          def id_(x):
